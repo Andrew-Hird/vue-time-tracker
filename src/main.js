@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Hello from './components/Hello.vue'
+import Home from './components/Home.vue'
 
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
@@ -14,14 +14,14 @@ const router = new VueRouter()
 
 // Pointing routes to the components they should use
 router.map({
-  '/hello': {
-    component: Hello
+  '/home': {
+    component: Home
   }
 })
 
 // Any invalid route will redirect to home
 router.redirect({
-  '*': '/hello'
+  '*': '/home'
 })
 
 router.start(App, '#app')
